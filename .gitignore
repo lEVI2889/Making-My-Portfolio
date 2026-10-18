@@ -1,0 +1,27 @@
+# Operating System
+.DS_Store
+Thumbs.db
+
+# Private documents & source CV files
+*.docx
+*.pdf
+
+# Editor & IDE artifacts
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node / Build artifacts
+node_modules/
+dist/
+.cache/
+
+# Local logs
+*.log
+npm-debug.log*
+
+# Local Streak Management
+streak.sh
+STREAK_ROADMAP.md
+
