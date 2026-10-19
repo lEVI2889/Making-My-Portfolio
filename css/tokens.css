@@ -1,0 +1,57 @@
+/**
+ * Obsidian Terminal Design System - Tokens
+ * Cybernetic high-polish developer dark theme.
+ * Zero third-party dependencies, standard CSS custom properties.
+ */
+
+:root {
+  /* --- Void & Surface Container Tiers --- */
+  --color-void: #0c1322;
+  --surface-lowest: #070e1d;
+  --surface-low: #141b2b;
+  --surface-container: #191f2f;
+  --surface-high: #232a3a;
+  --surface-highest: #2e3545;
+
+  /* --- Borders, Dividers & Glows --- */
+  --border-subtle: #1f2937;
+  --border-outline: #86948a;
+  --border-highlight: rgba(16, 185, 129, 0.35);
+  --border-glow: 0 0 16px rgba(16, 185, 129, 0.15);
+  --border-glow-cyan: 0 0 16px rgba(6, 182, 212, 0.15);
+
+  /* --- Accent Colors --- */
+  /* Primary: Emerald */
+  --accent-primary: #10b981;
+  --accent-primary-bright: #4edea3;
+  --accent-primary-dim: rgba(16, 185, 129, 0.1);
+
+  /* Secondary: Cyan */
+  --accent-secondary: #06b6d4;
+  --accent-secondary-bright: #4cd7f6;
+  --accent-secondary-dim: rgba(6, 182, 212, 0.1);
+
+  /* Tertiary: Rose / Warning */
+  --accent-rose: #f43f5e;
+  --accent-rose-dim: rgba(244, 63, 94, 0.1);
+
+  /* --- Text & Content Tokens --- */
+  --text-primary: #dce2f7;
+  --text-variant: #bbcabf;
+  --text-muted: #9ca3af;
+  --text-inverse: #070e1d;
+
+  /* --- Typography Font Families --- */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', Menlo, Consolas, monospace;
+
+  /* --- Type Scale & Line Heights --- */
+  --text-display-hero: clamp(2rem, 5vw, 2.5rem);
+  --lh-display-hero: 1.2;
+
+  --text-headline-lg: 1.5rem;
+  --lh-headline-lg: 2rem;
+
+  --text-headline-md: 1.25rem;
+
+}
