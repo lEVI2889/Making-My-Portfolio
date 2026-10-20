@@ -53,5 +53,48 @@
   --lh-headline-lg: 2rem;
 
   --text-headline-md: 1.25rem;
+  --lh-headline-md: 1.75rem;
 
+  --text-body-md: 0.875rem;
+  --lh-body-md: 1.375rem;
+
+  --text-code-block: 0.75rem;
+  --lh-code-block: 1.25rem;
+
+  --text-label-mono: 0.6875rem;
+  --lh-label-mono: 1rem;
+
+  /* --- Radii & Transitions --- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* --- Responsive Grid: Mobile Defaults (<768px) --- */
+  --grid-cols: 4;
+  --grid-margin: 1rem;
+  --grid-gutter: 1rem;
+  --grid-max-width: 100%;
+}
+
+/* Tablet Breakpoint (768px - 1024px) */
+@media (min-width: 768px) {
+  :root {
+    --grid-cols: 8;
+    --grid-margin: 2rem;
+    --grid-gutter: 1.25rem;
+  }
+}
+
+/* Desktop Breakpoint (>1024px) */
+@media (min-width: 1024px) {
+  :root {
+    --grid-cols: 12;
+    --grid-margin: 3rem;
+    --grid-gutter: 1.5rem;
+    --grid-max-width: 1120px;
+  }
 }
