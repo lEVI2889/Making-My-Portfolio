@@ -78,3 +78,87 @@ p {
 a {
   color: var(--accent-primary-bright);
   text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--accent-secondary-bright);
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--font-mono);
+  font-size: var(--text-code-block);
+  line-height: var(--lh-code-block);
+}
+
+/* 6. Terminal Scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--surface-high) var(--color-void);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-void);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--surface-high);
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--color-void);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--surface-highest);
+}
+
+/* 7. Selection Highlights */
+::selection {
+  background: var(--accent-primary-dim);
+  color: var(--accent-primary-bright);
+}
+
+::-moz-selection {
+  background: var(--accent-primary-dim);
+  color: var(--accent-primary-bright);
+}
+
+/* 8. Accessible Focus Visible Ring */
+:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+/* Remove default focus outline when not using keyboard navigation */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* 9. Utility Layout Helpers */
+.container {
+  width: 100%;
+  max-width: var(--grid-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--grid-margin);
+  padding-right: var(--grid-margin);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
