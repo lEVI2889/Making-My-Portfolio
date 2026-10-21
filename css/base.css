@@ -1,0 +1,80 @@
+/**
+ * Obsidian Terminal Design System - Base CSS & Reset
+ * Modern reset, responsive typography, cybernetic background, and accessibility.
+ * Strict Ponytail standard: Pure vanilla CSS.
+ */
+
+/* 1. Box Sizing and Baseline Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Document & Body Setup */
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-void);
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.05) 0%, transparent 60%),
+    radial-gradient(rgba(16, 185, 129, 0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 28px 28px;
+  background-position: center top, center center;
+  background-repeat: no-repeat, repeat;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: var(--text-body-md);
+  line-height: var(--lh-body-md);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 3. Media & Embedded Elements */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 4. Form Elements & Typography Inheritance */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* 5. Typography Element Defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.015em;
+}
+
+p {
+  color: var(--text-variant);
+}
+
+a {
+  color: var(--accent-primary-bright);
+  text-decoration: none;
