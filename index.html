@@ -21,7 +21,48 @@
   <link rel="stylesheet" href="css/timeline.css">
   <link rel="stylesheet" href="css/contact.css">
 </head>
-
 <body>
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to Content</a>
+
+  <!-- Cybernetic Sticky Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <div class="header-brand-wrap">
+        <a href="#overview" class="header-logo" aria-label="Abu Musa Rohan Portfolio Home">
+          <span class="logo-bracket">[</span>AMR://SYS<span class="logo-bracket">]</span>
+        </a>
+      </div>
+
+      <div class="header-status">
+        <span class="status-indicator online" aria-hidden="true"></span>
+        <span class="status-text">Open for roles</span>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="site-nav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="#overview" class="nav-link active"><span class="nav-num">// 01</span> Overview</a></li>
+          <li><a href="#projects" class="nav-link"><span class="nav-num">// 02</span> Projects</a></li>
+          <li><a href="#experience" class="nav-link"><span class="nav-num">// 03</span> Experience</a></li>
+          <li><a href="#contact" class="nav-link"><span class="nav-num">// 04</span> Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <a href="#contact" class="btn btn-outline-cyan header-dispatch-btn">Dispatch</a>
+        <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="mobile-nav-panel" hidden>
+      <ul class="mobile-nav-list">
+
 </body>
 </html>
