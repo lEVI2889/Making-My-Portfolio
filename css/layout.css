@@ -1,0 +1,100 @@
+/**
+ * Obsidian Terminal Design System - Layout & Navigation CSS
+ * Semantic 4/8/12 grid, cybernetic sticky header, section wrappers, and utility components.
+ * Strict Ponytail standard: Pure vanilla CSS with zero external dependencies.
+ */
+
+/* 1. Accessible Skip Link */
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--surface-highest);
+  color: var(--accent-primary-bright);
+  border: 1px solid var(--accent-primary);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: var(--text-body-md);
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: var(--border-glow);
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 1rem;
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+
+/* 3. Sticky Cybernetic Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: rgba(12, 19, 34, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-subtle);
+  transition: border-color var(--transition-fast);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+  gap: 1.5rem;
+}
+
+/* Logo & Monogram */
+.header-logo {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.header-logo:hover {
+  color: var(--accent-primary-bright);
+}
+
+.logo-bracket {
+  color: var(--accent-primary);
+  margin: 0 1px;
+}
+
+/* Telemetry Status Pill */
+.header-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: var(--text-label-mono);
+  color: var(--text-variant);
+  letter-spacing: 0.02em;
+}
+
+.status-indicator {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: var(--radius-full);
+  background-color: var(--accent-primary);
+  box-shadow: 0 0 8px var(--accent-primary);
+  position: relative;
+}
+
