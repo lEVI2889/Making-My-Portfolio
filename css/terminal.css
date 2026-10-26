@@ -1,0 +1,120 @@
+/**
+ * Obsidian Terminal Design System - Hero Overview & Terminal Console CSS
+ * Cybernetic terminal console emulator, syntax highlighting, telemetry chips, and metrics bar.
+ * Strict Ponytail standard: Pure vanilla CSS custom properties.
+ */
+
+/* 1. Hero Overview Section */
+.overview-section {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+
+.hero-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Telemetry Status Strip */
+.telemetry-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.625rem;
+  background-color: var(--surface-low);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: var(--text-label-mono);
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.chip-online {
+  border-color: rgba(16, 185, 129, 0.4);
+  background-color: var(--accent-primary-dim);
+  color: var(--accent-primary-bright);
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.1);
+}
+
+.hero-title {
+  font-size: var(--text-display-hero);
+  line-height: var(--lh-display-hero);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+}
+
+.hero-greeting {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.hero-role {
+  font-family: var(--font-mono);
+  font-size: var(--text-headline-md);
+  font-weight: 600;
+  color: var(--accent-secondary-bright);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.role-bracket {
+  color: var(--accent-primary);
+}
+
+.hero-lead {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--text-variant);
+  max-width: 720px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* 2. Metrics Counter Bar */
+.metrics-bar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .metrics-bar {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+.metric-item {
+  background: var(--surface-low);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.metric-item:hover {
+  border-color: var(--border-highlight);
+  transform: translateY(-2px);
+}
+
+.metric-value {
