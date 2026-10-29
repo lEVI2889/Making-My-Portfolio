@@ -43,5 +43,40 @@
     if (data.cliCommands && data.cliCommands[key]) {
       const out = data.cliCommands[key].output;
       return Array.isArray(out) ? out.join('\n') : String(out);
+    }
+    if (lower === 'skills') {
+      return 'Core Competencies:\n  Systems:   Distributed Systems, AsyncIO, Linux, Low-Latency Networking\n  Languages: Python, JavaScript, TypeScript, C++, SQL, Bash\n  Frontend:  Vanilla Web Standards, Semantic HTML5, CSS Custom Properties, A11y';
+    }
+    return `command not found: ${escapeHTML(cmd)}. Type 'help' to inspect available system commands.`;
+  }
+
+  function appendLine(html, type = '') {
+    const output = document.getElementById('terminal-output');
+    if (!output) return;
+    const line = document.createElement('div');
+    line.className = `terminal-line ${type}`.trim();
+    line.innerHTML = html;
+    output.appendChild(line);
+    const body = document.getElementById('terminal-body');
+    if (body) body.scrollTop = body.scrollHeight;
+  }
+
+  function initTerminal() {
+    if (typeof document === 'undefined') return;
+    const input = document.getElementById('terminal-input');
+    const copyBtn = document.getElementById('cli-copy-btn');
+    if (!input) return;
+
+    // Display startup profile payload
+    appendLine('<span class="prompt">guest@amr-terminal:~$</span> cat profile.json', 'cmd-echo');
+    const startupProfile = handleCommand('cat profile.json');
+    if (startupProfile) appendLine(startupProfile);
+
+    input.addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        const val = input.value.trim();
+        if (val) {
+          history.push(val);
+          historyIndex = history.length;
 
 };
