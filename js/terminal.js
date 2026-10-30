@@ -78,5 +78,35 @@
         if (val) {
           history.push(val);
           historyIndex = history.length;
+          appendLine(`<span class="prompt">guest@amr-terminal:~$</span> ${escapeHTML(val)}`, 'cmd-echo');
+          const result = handleCommand(val);
+          if (result !== null) appendLine(result, val.toLowerCase().startsWith('sudo') ? 'error-msg' : '');
+          input.value = '';
+        }
+      } else if (e.key === 'ArrowUp') {
+        if (history.length > 0 && historyIndex > 0) {
+          historyIndex--;
+          input.value = history[historyIndex];
+        }
+        e.preventDefault();
+      } else if (e.key === 'ArrowDown') {
+        if (historyIndex < history.length - 1) {
+          historyIndex++;
+          input.value = history[historyIndex];
+        } else {
+          historyIndex = history.length;
+          input.value = '';
+        }
+        e.preventDefault();
+      }
+    });
+
+    if (copyBtn) {
+      copyBtn.addEventListener('click', () => {
+        const curlCmd = 'curl -s https://raw.githubusercontent.com/lEVI2889/Portfolio/main/data/portfolio-data.js';
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(curlCmd).then(() => {
+            const originalHTML = copyBtn.innerHTML;
+            copyBtn.classList.add('copied');
 
 };
