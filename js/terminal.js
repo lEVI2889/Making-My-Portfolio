@@ -108,5 +108,22 @@
           navigator.clipboard.writeText(curlCmd).then(() => {
             const originalHTML = copyBtn.innerHTML;
             copyBtn.classList.add('copied');
+            copyBtn.innerHTML = '<span>Copied!</span>';
+            setTimeout(() => {
+              copyBtn.classList.remove('copied');
+              copyBtn.innerHTML = originalHTML;
+            }, 2000);
+          });
+        }
+      });
+    }
+  }
 
-};
+  if (typeof window !== 'undefined') {
+    window.handleCommand = handleCommand;
+    window.initTerminal = initTerminal;
+  }
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { handleCommand, highlightJSON, escapeHTML };
+  }
+})();
