@@ -108,3 +108,111 @@
   padding: 0.2rem 0.5rem;
   border-radius: var(--radius-sm);
   letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.project-stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-label-mono);
+  font-weight: 600;
+  color: #fbbf24;
+}
+
+.project-title {
+  font-size: var(--text-headline-md);
+  line-height: var(--lh-headline-md);
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+/* Description & Highlight Bullets */
+.project-desc {
+  font-size: var(--text-body-md);
+  line-height: var(--lh-body-md);
+  color: var(--text-variant);
+}
+
+.project-highlights {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  font-size: 0.8125rem;
+  line-height: 1.35;
+  color: var(--text-muted);
+}
+
+.project-highlights li {
+  position: relative;
+  padding-left: 1.125rem;
+}
+
+.project-highlights li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--accent-primary);
+  font-family: var(--font-mono);
+}
+
+/* Architecture Micro-Snippet */
+.arch-snippet {
+  background-color: var(--surface-lowest);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  font-family: var(--font-mono);
+}
+
+.arch-tag {
+  font-size: 0.625rem;
+  font-weight: 700;
+  color: var(--accent-secondary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.375rem;
+}
+
+.arch-code {
+  font-size: var(--text-code-block);
+  line-height: var(--lh-code-block);
+  color: var(--text-primary);
+  word-break: break-word;
+}
+
+.arch-arrow {
+  color: var(--accent-primary-bright);
+  font-weight: 700;
+  margin: 0 0.375rem;
+}
+
+/* Tech Stack Pills */
+.tech-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+.tech-pill {
+  font-family: var(--font-mono);
+  font-size: var(--text-label-mono);
+  color: var(--text-variant);
+  background-color: var(--surface-high);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+/* Actions Footer */
+.project-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
