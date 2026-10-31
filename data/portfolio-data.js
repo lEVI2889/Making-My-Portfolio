@@ -143,5 +143,80 @@ const portfolioData = {
       highlights: [
         "Sub-15ms route arbitration using custom adaptive scoring algorithm",
         "Automatic failover with circuit breakers across 6 upstream inference endpoints",
+        "Zero external dependencies runtime with streaming response proxies"
+      ],
+      architectureSnippet: "Inference Req -> Token Budget Guard -> Resilience Router -> Provider Pool -> Client Stream",
+      techStack: ["Python", "AsyncIO", "REST APIs", "Distributed Systems", "JSON-RPC"],
+      githubUrl: "https://github.com/lEVI2889/omniroute-engine",
+      liveUrl: "",
+      stars: 48
+    },
+    {
+      id: "obsidian-portfolio",
+      title: "Obsidian Terminal Web Portfolio",
+      category: "web",
+      badge: "Featured UI",
+      description: "High-polish cybernetic portfolio inspired by retro-futuristic terminal interfaces. Adheres to strict Ponytail engineering standards with zero build steps or runtime dependencies.",
+      highlights: [
+        "Fully functional in-browser interactive terminal emulator with history and command autocomplete",
+        "Decoupled JSON data layer enabling seamless CV content updates without HTML modifications",
+        "Fluid responsive 12-column Obsidian Terminal design system with accessible keyboard navigation"
+      ],
+      architectureSnippet: "Browser -> Semantic HTML5 -> CSS Tokens -> Vanilla Controller JS -> Terminal Dispatch",
+      techStack: ["Vanilla JS", "Modern CSS", "HTML5", "A11y", "Zero-Build"],
+      githubUrl: "https://github.com/lEVI2889/Portfolio",
+      liveUrl: "https://levi2889.github.io/Portfolio",
+      stars: 32
+    },
+    {
+      id: "agentic-code-auditor",
+      title: "Agentic Code Auditor",
+      category: "ai",
+      badge: "Autonomous AI",
+      description: "Autonomous multi-agent code analysis pipeline that evaluates pull requests for security flaws, memory leaks, and architectural deviations against explicit project rules.",
+      highlights: [
+        "Deterministic rule validation engine paired with contextual LLM reasoning",
+        "Automated reproduction script synthesis for verified vulnerability reporting",
+        "Interactive markdown audit reporting with structured risk metrics"
+      ],
+      architectureSnippet: "PR Webhook -> AST Parser -> Agent Reviewers -> Consensus Engine -> PR Comments",
+      techStack: ["Python", "Tree-sitter", "Agentic Systems", "Security", "GitHub API"],
+      githubUrl: "https://github.com/lEVI2889/agentic-code-auditor",
+      liveUrl: "",
+      stars: 64
+    },
+    {
+      id: "cadet-ops-cli",
+      title: "CadetOps Operations CLI",
+      category: "tools",
+      badge: "CLI Utility",
+      description: "Cross-platform command-line operational tool for managing student leadership workflows, event registrations, roster syncs, and official dispatch notices.",
+      highlights: [
+        "Integrated encrypted roster storage with localized SQLite backing",
+        "Automated notice generation formatted for high-volume email & SMS dispatch",
+        "Zero-configuration single binary deployment"
+      ],
+      architectureSnippet: "CLI Input -> Command Router -> Operations SQLite DB -> Templating Engine -> Dispatch API",
+      techStack: ["Python", "SQLite", "CLI", "Automation", "Cryptography"],
+      githubUrl: "https://github.com/lEVI2889/cadet-ops-cli",
+      liveUrl: "",
+      stars: 19
+    }
+  ],
+
+  experience: [
+    {
+      hash: "e7b49a1",
+      date: "Jan 2026 – Present",
+      role: "Club President",
+      company: "International Association of Business Communicators (IABC)",
+      location: "Dhaka, Bangladesh",
+      branch: "main",
+      description: "Lead club operations, student council coordination, and club development initiatives for the organization's Dhaka chapter.",
+      impactMetrics: [
+        "Lead club operations and executive chapter administration",
+        "Direct student council coordination and student engagement",
+        "Spearhead club development programs and organizational communication"
+      ],
 
 };
