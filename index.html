@@ -128,6 +128,32 @@
         </div>
       </div>
     </section>
+              <div class="terminal-controls" aria-hidden="true">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="terminal-title">amr@workstation:~ (zsh)</div>
+              <div class="terminal-actions">
+                <button class="cli-copy-btn" id="cli-copy-btn" aria-label="Copy CLI command to clipboard" title="Copy CLI curl command">
+                  <svg class="copy-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span class="copy-text">curl -s amr.dev/profile.json</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="terminal-body" id="terminal-body">
+              <div class="terminal-output" id="terminal-output" role="log" aria-live="polite"></div>
+              <div class="terminal-prompt-line">
+                <span class="prompt">guest@amr-terminal:~$</span>
+                <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Type 'help' or command..." aria-label="Terminal command input">
+              </div>
+            </div>
+          </div>
+
   </main>
   <script src="data/portfolio-data.js"></script>
   <script src="js/terminal.js"></script>
