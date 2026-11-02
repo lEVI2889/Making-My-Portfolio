@@ -63,5 +63,53 @@
     grid.innerHTML = projects.map(createCardHTML).join('');
   }
 
+  function initProjects() {
+    const grid = document.getElementById('projects-grid');
+    if (!grid) return;
 
-};
+    let filterBar = document.getElementById('projects-filter-bar');
+    if (!filterBar && grid.parentNode) {
+      filterBar = document.createElement('div');
+      filterBar.id = 'projects-filter-bar';
+      filterBar.className = 'projects-filter-bar';
+      filterBar.setAttribute('role', 'tablist');
+      filterBar.setAttribute('aria-label', 'Filter projects by category');
+      
+      const filters = [
+        { id: 'all', label: 'All Repositories' },
+        { id: 'systems', label: 'Systems / Backend' },
+        { id: 'web', label: 'Fullstack / Web' },
+        { id: 'ai-tools', label: 'AI / ML / Tools' }
+      ];
+
+      filterBar.innerHTML = filters.map((f, i) => `
+        <button class="filter-tab ${i === 0 ? 'active' : ''}" data-filter="${f.id}" role="tab" aria-selected="${i === 0 ? 'true' : 'false'}">
+          ${escapeHTML(f.label)}
+        </button>
+      `).join('');
+
+      grid.parentNode.insertBefore(filterBar, grid);
+
+      filterBar.addEventListener('click', e => {
+        const btn = e.target.closest('.filter-tab');
+        if (!btn) return;
+        filterBar.querySelectorAll('.filter-tab').forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+        renderProjects(btn.dataset.filter);
+      });
+    }
+    renderProjects('all');
+  }
+
+  if (typeof window !== 'undefined') {
+    window.renderProjects = renderProjects;
+    window.initProjects = initProjects;
+  }
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { renderProjects, matchesCategory, formatArchitecture };
+  }
+})();
