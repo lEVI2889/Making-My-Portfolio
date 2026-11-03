@@ -218,5 +218,60 @@ const portfolioData = {
         "Direct student council coordination and student engagement",
         "Spearhead club development programs and organizational communication"
       ],
+      tech: ["Student Leadership", "Club Management", "Student Council", "Club Development", "Club Operations"],
+      isMilestone: true
+    },
+    {
+      hash: "93f218d",
+      date: "2024 – 2025",
+      role: "Systems & Fullstack Developer",
+      company: "Independent Research & Engineering",
+      location: "Dhaka / Remote",
+      branch: "main",
+      description: "Researched and engineered resilient distributed systems, autonomous agents, and lightweight zero-framework web interfaces.",
+      impactMetrics: [
+        "Architected multi-provider AI model orchestration engine with sub-25ms routing latency",
+        "Engineered zero-dependency client web applications with Python backends and vanilla web standards",
+        "Authored open-source developer utilities and autonomous code review tooling"
+      ],
+      tech: ["Python", "Java", "Distributed Systems", "REST APIs", "Git"],
+      isMilestone: true
+    },
+    {
+      hash: "4a82b05",
+      date: "2023 – Present",
+      role: "Undergraduate Student (B.Sc. in CSE)",
+      company: "BRAC University",
+      location: "Dhaka, Bangladesh",
+      branch: "main",
+      description: "Bachelor of Science, Computer Science and Engineering student. Coursework includes Data Structures, Algorithms, Object-Oriented Programming (Java, Python), and Systems Engineering.",
+      impactMetrics: [
+        "Core coursework in Computer Science, Data Structures, and Algorithms",
+        "Active member of student leadership and collegiate programming circles"
+      ],
+      tech: ["Python", "Java", "Data Structures", "Algorithms", "OOP"],
+      isMilestone: false
+    },
+    {
+      hash: "1c3d08f",
+      date: "Mar 2016 – Dec 2022",
+      role: "Cadet Scholar (Higher Secondary School Certificate, Science)",
+      company: "Mirzapur Cadet College",
+      location: "Tangail, Bangladesh",
+      branch: "main",
+      description: "Higher Secondary School Certificate, Science. Completed rigorous 7-year academic and leadership training program under military discipline.",
+      impactMetrics: [
+        "Graduated with High Secondary School Certificate (Science discipline)",
+        "Collegiate leadership, physical endurance, and student discipline"
+      ],
+      tech: ["Student Leadership", "Discipline", "Science", "Mathematics"],
+      isMilestone: false
+    }
+  ],
+
+  publications: [
+    {
+      title: "Resilient Multi-Model Orchestration for High-Concurrency Agentic Workflows",
+      venue: "Technical Whitepaper Series",
 
 };
