@@ -273,5 +273,51 @@ const portfolioData = {
     {
       title: "Resilient Multi-Model Orchestration for High-Concurrency Agentic Workflows",
       venue: "Technical Whitepaper Series",
+      year: "2025",
+      doiOrUrl: "https://github.com/lEVI2889/omniroute-engine",
+      type: "Whitepaper"
+    },
+    {
+      title: "Zero-Framework Architectural Paradigms for Modern Hyper-Performant Web Clients",
+      venue: "Systems Engineering Research Notes",
+      year: "2024",
+      doiOrUrl: "https://github.com/lEVI2889/Portfolio",
+      type: "Conference"
+    }
+  ],
 
+  education: [
+    {
+      institution: "BRAC University, Dhaka",
+      degree: "Bachelor of Science, Computer Science and Engineering",
+      year: "2023 – Present",
+      details: "Comprehensive undergraduate computing curriculum covering Algorithms, Data Structures, OOP with Java/Python, and Systems Engineering.",
+      honors: "Active Departmental Standing"
+    },
+    {
+      institution: "Mirzapur Cadet College",
+      degree: "Higher Secondary School Certificate, Science",
+      year: "Mar 2016 – Dec 2022",
+      details: "7-year collegiate military education emphasizing academic rigor, leadership, physical endurance, and discipline.",
+      honors: "Cadet Platoon Appointment"
+    }
+  ],
+
+  contact: {
+    email: "abumusarohan2437@gmail.com",
+    github: "https://github.com/lEVI2889",
+    linkedin: "https://linkedin.com/in/abu-musa-rohan-b84a91421",
+    phone: "01722615596",
+    location: "Dhaka, Bangladesh",
+    pgpKeyId: "0x9F4B3C2A",
+    pgpFingerprint: "8A2B 4C1D 9E3F 7A01 5B6C 8D9E 0F1A 2B3C 9F4B 3C2A"
+  }
 };
+
+// Dual export for browser global and CommonJS / Node.js environments
+if (typeof window !== "undefined") {
+  window.PORTFOLIO_DATA = portfolioData;
+}
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = portfolioData;
+}
