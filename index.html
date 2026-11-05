@@ -123,11 +123,6 @@
         <div class="terminal-card">
           <div class="terminal-window" id="terminal-window">
             <div class="terminal-topbar">
-
-          </div>
-        </div>
-      </div>
-    </section>
               <div class="terminal-controls" aria-hidden="true">
                 <span class="dot red"></span>
                 <span class="dot yellow"></span>
@@ -154,8 +149,40 @@
             </div>
           </div>
 
+          <div class="terminal-footer-hint">
+            <span><kbd>Enter</kbd> execute</span>
+            <span><kbd>&uarr;</kbd> <kbd>&darr;</kbd> history</span>
+            <span>Type <code class="hint-cmd">help</code> for directory</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 02: Technical Projects -->
+    <section id="projects" class="section projects-section" aria-label="Technical Projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">// 02: REPOSITORY</div>
+          <h2 class="section-title">Technical Projects</h2>
+          <p class="section-desc">Selected open-source engines, autonomous agents, and system architecture implementations built for resilience and speed.</p>
+        </div>
+        <div id="projects-grid" class="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- Section 03: Career & Publications -->
+    <section id="experience" class="section experience-section" aria-label="Career & Publications">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">// 03: CAREER_LOG</div>
+          <h2 class="section-title">Experience & Milestones</h2>
+          <p class="section-desc">Git-style commit log of leadership positions, engineering initiatives, and research publications.</p>
+        </div>
+        <div id="timeline-container" class="timeline-container"></div>
+
   </main>
   <script src="data/portfolio-data.js"></script>
   <script src="js/terminal.js"></script>
+  <script src="js/projects.js"></script>
 </body>
 </html>
