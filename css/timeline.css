@@ -1,0 +1,140 @@
+/**
+ * Obsidian Terminal Design System - Timeline, Publications & Education
+ * Git commit graph, pulsing milestone nodes, research & credential cards.
+ * Strict Ponytail standard: Pure vanilla CSS with zero external dependencies.
+ */
+
+/* 1. Git-Commit Graph Timeline */
+.timeline-container {
+  margin-bottom: 4rem;
+}
+
+.timeline-tree {
+  position: relative;
+  margin-left: 0.75rem;
+  border-left: 2px solid var(--border-subtle);
+  padding: 0.5rem 0 1rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
+@media (min-width: 768px) {
+  .timeline-tree {
+    margin-left: 1.5rem;
+    padding-left: 2.25rem;
+  }
+}
+
+.timeline-item {
+  position: relative;
+}
+
+/* Circular Git Commit Node */
+.commit-node {
+  position: absolute;
+  left: -2.3125rem;
+  top: 0.375rem;
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+  background-color: var(--surface-high);
+  border: 2px solid var(--border-outline);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+@media (min-width: 768px) {
+  .commit-node {
+    left: -2.8125rem;
+  }
+}
+
+/* Pulsing Milestone Commit Node */
+.commit-node.milestone-node {
+  background-color: var(--accent-primary);
+  border-color: var(--accent-primary-bright);
+  box-shadow: 0 0 10px var(--accent-primary);
+  animation: milestone-pulse 2.4s infinite ease-in-out;
+}
+
+@keyframes milestone-pulse {
+  0% { box-shadow: 0 0 6px rgba(16, 185, 129, 0.6); }
+  50% { box-shadow: 0 0 16px rgba(16, 185, 129, 0.9), 0 0 24px rgba(16, 185, 129, 0.3); }
+  100% { box-shadow: 0 0 6px rgba(16, 185, 129, 0.6); }
+}
+
+/* Commit Header Chips */
+.commit-header {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.commit-hash {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-secondary-bright);
+  background-color: var(--surface-lowest);
+  border: 1px solid var(--border-subtle);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.commit-branch {
+  font-family: var(--font-mono);
+  font-size: var(--text-label-mono);
+  color: var(--accent-primary-bright);
+  background: var(--accent-primary-dim);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.commit-date {
+  font-family: var(--font-mono);
+  font-size: var(--text-label-mono);
+  color: var(--text-muted);
+}
+
+/* Commit Card Body */
+.commit-body {
+  background-color: var(--surface-container);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.commit-body:hover {
+  border-color: var(--border-highlight);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.08);
+}
+
+.commit-role {
+  font-size: var(--text-headline-md);
+  line-height: var(--lh-headline-md);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.commit-org {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--accent-secondary-bright);
+}
+
+.commit-desc {
+  font-size: var(--text-body-md);
+  line-height: var(--lh-body-md);
+  color: var(--text-variant);
+}
+
+.commit-metrics {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
