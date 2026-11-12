@@ -1,0 +1,120 @@
+/**
+ * Obsidian Terminal Design System - Contact & Dispatch Component Styles
+ * Interactive terminal dispatch form, real-time packet status, telemetry channels.
+ * Strict Ponytail standard: Pure vanilla CSS with zero external dependencies.
+ */
+
+/* 1. Contact Container Grid */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  .contact-container {
+    grid-template-columns: 1.4fr 1fr;
+  }
+}
+
+/* 2. Dispatch Card & Telemetry Card */
+.dispatch-card,
+.telemetry-card {
+  background-color: var(--surface-container);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: relative;
+  transition: border-color var(--transition-fast);
+}
+
+.dispatch-card:hover,
+.telemetry-card:hover {
+  border-color: var(--border-highlight);
+}
+
+.card-title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.card-title {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--accent-secondary-bright);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* 3. Dispatch Form Controls */
+.dispatch-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.form-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-label-mono);
+  font-weight: 600;
+  color: var(--text-variant);
+  letter-spacing: 0.04em;
+}
+
+.form-label .bracket {
+  color: var(--accent-primary);
+}
+
+.dispatch-input,
+.dispatch-textarea {
+  background-color: var(--surface-lowest);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  padding: 0.625rem 0.875rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  width: 100%;
+}
+
+.dispatch-input:focus,
+.dispatch-textarea:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.25);
+}
+
+.dispatch-textarea {
+  resize: vertical;
+  min-height: 90px;
+  line-height: 1.4;
+}
+
+/* Transmission Simulation Feedback Box */
+.transmission-box {
+  background-color: var(--surface-lowest);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-code-block);
+  line-height: 1.5;
+  color: var(--accent-primary-bright);
+  min-height: 2.75rem;
+  display: flex;
