@@ -118,3 +118,119 @@
   color: var(--accent-primary-bright);
   min-height: 2.75rem;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.transmission-box.error {
+  color: var(--accent-rose);
+  border-color: rgba(244, 63, 94, 0.4);
+}
+
+.transmission-box.success {
+  color: var(--accent-primary-bright);
+  border-color: var(--accent-primary);
+}
+
+.transmission-box a {
+  color: var(--accent-secondary-bright);
+  text-decoration: underline;
+  margin-top: 0.25rem;
+}
+
+/* 4. Telemetry Channels & PGP Info */
+.channels-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.channel-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.channel-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.channel-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.channel-val {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--text-primary);
+  word-break: break-all;
+}
+
+.channel-link {
+  color: var(--accent-secondary-bright);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.channel-link:hover {
+  color: var(--accent-primary-bright);
+  text-decoration: underline;
+}
+
+/* CLI Quick Dispatch Box */
+.cli-box-wrap {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.cli-copy-box {
+  background-color: var(--surface-lowest);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 0.625rem 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.cli-code {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--accent-primary-bright);
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.cli-btn-copy {
+  background: var(--surface-low);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.cli-btn-copy:hover {
+  background: var(--surface-high);
+  color: var(--text-primary);
+  border-color: var(--border-highlight);
+}
+
+.cli-btn-copy.copied {
+  color: var(--accent-primary-bright);
+  border-color: var(--accent-primary);
+}
