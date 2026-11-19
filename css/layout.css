@@ -318,3 +318,137 @@
 
 .section-desc {
   font-size: var(--text-body-md);
+  line-height: var(--lh-body-md);
+  color: var(--text-variant);
+  max-width: 680px;
+}
+
+/* 5. Cybernetic Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.125rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-label-mono);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.btn-sm {
+  padding: 0.375rem 0.75rem;
+  font-size: var(--text-label-mono);
+}
+
+.btn-primary {
+  background-color: var(--accent-primary);
+  color: var(--color-void);
+  border-color: var(--accent-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-primary-bright);
+  box-shadow: var(--border-glow);
+  color: var(--color-void);
+}
+
+.btn-outline-cyan {
+  background-color: transparent;
+  border-color: var(--accent-secondary);
+  color: var(--accent-secondary-bright);
+}
+
+.btn-outline-cyan:hover {
+  background-color: var(--accent-secondary-dim);
+  box-shadow: var(--border-glow-cyan);
+  color: #ffffff;
+}
+
+.btn-ghost {
+  background-color: var(--surface-low);
+  border-color: var(--border-subtle);
+  color: var(--text-primary);
+}
+
+.btn-ghost:hover {
+  background-color: var(--surface-high);
+  border-color: var(--border-highlight);
+  color: var(--text-primary);
+}
+
+/* 6. Site Footer */
+.site-footer {
+  border-top: 1px solid var(--border-subtle);
+  background-color: var(--surface-lowest);
+  padding: 2.25rem 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-label-mono);
+  color: var(--text-muted);
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.footer-telemetry {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.telemetry-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
+}
+
+.telemetry-divider {
+  color: var(--border-subtle);
+}
+
+.latency-indicator {
+  color: var(--accent-secondary-bright);
+}
+
+.utc-clock {
+  color: var(--accent-primary-bright);
+}
+
+.footer-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-copy {
+  color: var(--text-muted);
+}
+
+.back-to-top-link {
+  color: var(--accent-primary-bright);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.back-to-top-link:hover {
+  color: var(--accent-secondary-bright);
+}
